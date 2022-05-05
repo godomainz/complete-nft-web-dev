@@ -4,5 +4,6 @@ pragma solidity >=0.4.22 <0.9.0;
 // digit upwards to the next increment of the non zero number
 
 contract CryptoToken {
-    uint public tokens = 400;
+    uint private tokens = 400;
+    address public minter;
 }
