@@ -10,7 +10,7 @@ contract CryptoToken {
     // 3. create a var address called sender and set it so that it is publically accessible
     /* uint private totalSupply = 7;
     address public sender; */
-
+    mapping(address => uint) public balances;
     address public minter;
 
     // constructor special type of dunction that get called immediately upon deployment
