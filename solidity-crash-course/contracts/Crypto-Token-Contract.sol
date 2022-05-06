@@ -20,6 +20,6 @@ contract CryptoToken {
 
     event Sent(address from, address to, uint amount);
     function mint(address receiver, uint amount) public {
-
+        require(msg.sender == minter);
     }
 }
