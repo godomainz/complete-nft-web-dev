@@ -17,4 +17,6 @@ contract CryptoToken {
     constructor(){
         minter = msg.sender;
     }
+
+    event Sent(address from, address to, uint amount);
 }
