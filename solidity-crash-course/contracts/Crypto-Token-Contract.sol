@@ -14,4 +14,10 @@ contract CryptoToken {
         require(msg.sender == minter);
         balances[receiver] += amount;
     }
+
+    function send(address receiver, uint amount) public {
+        balances[msg.sender] -= amount;
+        balances[receiver] += amount;
+        emit Sent(msg.sender, receiver, amount);
+    }
 }
